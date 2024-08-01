@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+<style>
+    .box{
+  
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        margin:10px;
+        border-radius:10px;
+        padding: 10px 30px;
+    }
+    .box img{
+        width: 100%;
+        border-radius:10px;
+    }
+    .slick-next:before{
+        color:gray;
+        font-size: 25px;
+      
+    }
+    .slick-prev:before{
+        color:gray;
+        font-size: 25px;
+    }
+    .slick-prev{
+        transform: translateX(200%);
+    }
+    .slick-next{
+        transform: translateX(-200%) 
+    }
+    .slick-dots{
+        margin-bottom: -70px;
+        overflow-x: scroll;
+        display: flex !important;
+        padding: 5px;
+    }
+
+
+    .slick-dots li{
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        padding: 5px !important;
+         border: 5px solid white;
+    }
+
+    .slick-dots li button{
+        width: 60px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        
+    }
+    .slick-dots li button:before{
+            content: " ";
+      
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: center;
+          
+          
+            font-size: 40px;
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            
+    }
+    .slick-dots li:first-child button:before{
+        content: " ";
+        background-image: url(img/shirt1.avif);
+    }
+    .slick-dots li:nth-child(2) button:before{
+        content: " ";
+        background-image: url(img/shirt2.avif);
+    }
+    .slick-dots li:nth-child(3) button:before{
+        content: " ";
+        background-image: url(img/shirt3.avif);
+    }
+    .slick-dots li:nth-child(4) button:before{
+        content: " ";
+        background-image: url(img/shirt4.avif);
+    }
+    .slick-dots li:nth-child(5) button:before{
+        content: " ";
+        background-image: url(img/shirt5.webp);
+    }
+    .slick-dots li:nth-child(6) button:before{
+        content: " ";
+        background-image: url(img/shirt6.avif);
+    }
+    .slick-dots li:nth-child(7) button:before{
+        content: " ";
+        background-image: url(img/shirt7.jpg);
+    }
+    .slick-dots li:nth-child(8) button:before{
+        content: " ";
+        background-image: url(img/shirt8.jpg);
+    }
+    .slick-dots li:nth-child(9) button:before{
+        content: " ";
+        background-image: url(img/shirt9.avif);
+    }
+    .slick-dots li:nth-child(10) button:before{
+        content: " ";
+        background-image: url(img/shirt10.avif);
+    }
+    .slick-dots li:nth-child(11) button:before{
+        content: " ";
+        background-image: url(img/shirt11.avif);
+    }
+    .slick-dots li:nth-child(12) button:before{
+        content: " ";
+        background-image: url(img/shirt12.webp);
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="responsive slider">
+            <div class="box">
+                <img src="img/shirt1.avif" alt="">
+            </div>
+            <div class="box">
+                <img src="img/shirt2.avif" alt="">
+            </div>
+            <div class="box">
+                <img src="img/shirt3.avif" alt="">
+            </div>
+            <div class="box">
+                <img src="img/shirt4.avif" alt="">
+            </div>
+            <div class="box">
+                <img src="img/shirt5.webp" alt="">
+            </div>
+            <div class="box">
+                <img src="img/shirt6.avif" alt="">
+            </div>
+            <div class="box">
+                <img src="img/shirt7.jpg" alt="">
+            </div>
+            <div class="box">
+                <img src="img/shirt8.jpg" alt="">
+            </div>
+            <div class="box">
+                <img src="img/shirt9.avif" alt="">
+            </div>
+            <div class="box">
+                <img src="img/shirt10.avif" alt="">
+            </div>
+            <div class="box">
+                <img src="img/shirt11.avif" alt="">
+            </div>
+            <div class="box">
+                <img src="img/shirt12.webp" alt="">
+            </div>
+           
+        </div>
+
+    </div>
+    
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script>
+    $('.responsive').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+
+  ]
+});
+</script>
+</body>
+</html>
